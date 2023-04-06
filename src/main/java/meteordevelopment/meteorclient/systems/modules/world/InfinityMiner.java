@@ -184,7 +184,6 @@ public class InfinityMiner extends Module {
 
     private boolean findPickaxe() {
         Predicate<ItemStack> pickaxePredicate = (stack -> stack.getItem() instanceof PickaxeItem
-            && Utils.hasEnchantments(stack, Enchantments.MENDING)
             && !Utils.hasEnchantments(stack, Enchantments.SILK_TOUCH));
         FindItemResult bestPick = InvUtils.findInHotbar(pickaxePredicate);
 
